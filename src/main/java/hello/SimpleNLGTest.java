@@ -66,6 +66,14 @@ public class SimpleNLGTest {
 		String output4 = realiser.realiseSentence(p);  //Realiser created earlier
 		System.out.println(output4);
 
+		/* ----------------------------------------------------------- */
+
+		PhraseElement possNP = nlgFactory.createNounPhrase("a", "man"); //$NON-NLS-1$ //$NON-NLS-2$
+		possNP.setFeature(Feature.POSSESSIVE, true);
+		String output5 = realiser.realise(possNP).getRealisation();
+		System.out.println(output5);
+
+		/* ----------------------------------------------------------- */
 
 	}
 }
